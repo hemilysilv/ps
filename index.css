@@ -1,0 +1,165 @@
+*{ /* //definindo todos os elemetnos tem margem*/
+   box-sizing: border-box;
+   font-family:'Montserrat'sans-serif;
+   margin: 0;
+   padding: 0;
+}
+body{
+color: #263138;
+}
+header{
+    background-color: #ff9a6c;
+    display: flex;/* pra ativar justify e o align*/
+    align-items: center; /*alinhar na vertical*/
+    justify-content: space-between; /* espço entre eles*/
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+header  nav a{
+    color: #ffff;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+
+}
+#inicio{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /*topo, direita, baixo, esquerda*/
+    padding: 24px, 80px, 128px, 80px;
+    position: relative;
+}
+h1,
+h2 {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 32px;
+}
+.paragrafo{
+    line-height: 15px;
+    margin-bottom: 32px;
+}
+.botao{
+    background-color: #ff9a6c;
+    border-radius: 8px;
+    color: white; /*configuraçoes do botao com cor*/
+    /*vertical,horizontal*/
+    padding: 16px 32px ;
+    text-decoration: none;
+}
+.botao-transparente{
+    background-color: transparent; /*configuraçoes do botao sem cor*/
+    color: #ff9a6c;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+}
+.absolute{
+    position: absolute;
+    bottom: 0;/*configuracoes da imagem com a classe absolute*/
+    left: 0;
+    width: 100%;
+    z-index: -10;/*por tras da imagem*/
+}
+
+#clinica{
+    display: flex;
+    align-items: center;/*configuraçoes da parte da clinica*/
+    gap: 64px;
+    padding:64px 80px ;
+}
+
+#clinica li{
+    margin-bottom: 16px; /*configurando a lista*/
+    margin-left: 32px;
+}
+
+#farmacia{
+    padding: 64px 80px;
+    text-align: center;
+}
+#farmacia img{ /*configurando a imagem de farmacia*/
+   margin: 64px auto;
+}
+#farmacia .paragrafo{ /* configurando a farmacia*/
+  max-width: 950px;  
+  margin: 0 auto;/*centralizar o texto*/
+}
+#duvidas{
+    display: flex;
+    align-items:center ;/*configurando a parte de duvidas*/
+    gap: 64px;
+    padding: 64px 80px;
+}
+.duvida{
+    position: relative;
+}
+.duvida h3{
+    border: 2px solid #ff9a6c;
+    border-radius: 8px;
+    cursor: pointer;/*maozinha do mouse*/
+    padding: 24px;
+ 
+}
+.duvida img{
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+.duvida .paragrafo{
+    border-right: 1px solid #ff725e;
+    border-bottom: 1px solid #ff725e;
+    border-left: 1px solid #ff725e;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0;
+    opacity: 0 ;/*tirando a linha da caixinha e deixando tudo fechado*/
+    overflow: hidden;/*transbordamento de um elemento, parte da caixinha que fica a resposta das "duvidas" , hidden é escondido*/
+    transition:.2s;
+}
+.duvida.ativa .paragrafo{
+    height: fit-content;/*fazer o conteudo caber*/
+    opacity: 1;
+    padding: 24px;
+    /* (respostas das duvida)fazendo abrir os paragafos dentro da caixinha*/
+}
+footer{
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex;
+    justify-content: space-between;
+    gap:80px;
+    padding: 64px 80px;
+}
+footer img,
+footer .titulo{
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+footer nav a {
+    color: #263138;
+    display: block;
+    margin-bottom: 14px;
+    text-decoration: none;
+    
+}
+footer p {
+   margin-bottom: 16px;
+   max-width: 350px;
+}
+footer p a {
+    color: #ff725e;
+   text-decoration: none;
+}
+#copyright{
+    background-color: #263138;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+#copyright a{
+    color: #ff9a6c;
+}
